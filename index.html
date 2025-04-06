@@ -34,6 +34,46 @@
       <p class="text-lg">We serve the community through monthly langars, zikr gatherings, qawwali mehfils, and spiritual development sessions. The Sajjada Nasheen continues the path of Sufi love and service to mankind.</p>
     </div>
   </section>
+  <!-- Hazrat Nizamuddin Auliya Section -->
+<section class="py-16 bg-yellow-50">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-yellow-700 mb-6">Hazrat Nizamuddin Auliya (R.A)</h2>
+
+    <!-- Slider Container -->
+    <div class="relative overflow-hidden">
+      <!-- Teachings wrapper -->
+      <div id="nizamSlider" class="flex transition-transform duration-500 ease-in-out">
+        <div class="min-w-full px-4">
+          <p class="text-lg italic text-gray-700">"Love all, hate none."</p>
+        </div>
+        <div class="min-w-full px-4">
+          <p class="text-lg italic text-gray-700">"Do not desire anything except God."</p>
+        </div>
+        <div class="min-w-full px-4">
+          <p class="text-lg italic text-gray-700">"Be like a flower that gives its fragrance even to the hand that crushes it."</p>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button onclick="slideNizam(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full shadow hover:bg-yellow-500">
+        &#8592;
+      </button>
+      <button onclick="slideNizam(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-2 rounded-full shadow hover:bg-yellow-500">
+        &#8594;
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  let nizamIndex = 0;
+  function slideNizam(dir) {
+    const slider = document.getElementById('nizamSlider');
+    const totalSlides = slider.children.length;
+    nizamIndex = (nizamIndex + dir + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${nizamIndex * 100}%)`;
+  }
+</script>
 
   <!-- Teachings Section -->
   <section id="teachings" class="py-16 bg-gray-100">
